@@ -5,7 +5,8 @@
 @trunk-fill: #f9b29c; // Lch(79,33,42), error 0.7
 @primary-fill: #fcd6a4; // Lch(88,31,74), error 1.7
 @secondary-fill: #f7fabf; // Lch(97,29,106), error 1.7
-@tertiary-fill: #ffffff;
+//@tertiary-fill: #ffffff;
+@tertiary-fill: #ffdb4b;
 @residential-fill: #ffffff;
 @service-fill: @residential-fill;
 @living-street-fill: #ededed;
@@ -16,7 +17,9 @@
 @steps-fill: @footway-fill;
 @cycleway-fill: blue;
 @bridleway-fill: green;
-@track-fill: #996600;
+//@track-fill: #996600;
+@track-fill: #231700;
+
 @aeroway-fill: #bbc;
 @runway-fill: @aeroway-fill;
 @taxiway-fill: @aeroway-fill;
@@ -32,7 +35,10 @@
 @trunk-casing: #c84e2f; // Lch(50,65,42), error 0.7
 @primary-casing: #a06b00; // Lch(50,60,74), error 1.6
 @secondary-casing: #707d05; // Lch(50,55,106), error 1.9
-@tertiary-casing: #8f8f8f;
+
+//@tertiary-casing: #8f8f8f;
+@tertiary-casing: #434343;
+
 @residential-casing: #bbb;
 @road-casing: @residential-casing;
 @service-casing: @residential-casing;
