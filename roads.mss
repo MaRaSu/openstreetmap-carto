@@ -4,9 +4,13 @@
 @motorway-fill: #e892a2; // Lch(70,35,10), error 0.5
 @trunk-fill: #f9b29c; // Lch(79,33,42), error 0.7
 @primary-fill: #fcd6a4; // Lch(88,31,74), error 1.7
-@secondary-fill: #f7fabf; // Lch(97,29,106), error 1.7
+
+//@secondary-fill: #f7fabf; // Lch(97,29,106), error 1.7
+@secondary-fill: #ffdb4b;
 //@tertiary-fill: #ffffff;
-@tertiary-fill: #ffdb4b;
+//@tertiary-fill: #f9d6aa;
+@tertiary-fill: #F3E133;
+
 @residential-fill: #ffffff;
 @service-fill: @residential-fill;
 @living-street-fill: #ededed;
