@@ -88,7 +88,7 @@
     point-placement: interior;
   }
 
-  [feature = 'amenity_taxi'][zoom >= 16] {
+  [feature = 'amenity_taxi'][zoom >= 17] {
     marker-file: url('symbols/taxi.16.svg');
     marker-fill: @transportation-icon;
     marker-placement: interior;
@@ -1650,7 +1650,7 @@
     text-placement: interior;
   }
 
-  [feature = 'amenity_taxi'][zoom >= 16] {
+  [feature = 'amenity_taxi'][zoom >= 17] {
     text-name: "[name]";
     text-size: 9;
     text-fill: #0066ff;
@@ -1682,16 +1682,20 @@
   }
 
   [feature = 'leisure_marina'][zoom >= 15] {
-    text-name: "[name]";
-    text-size: 8;
-    text-fill: @marina-text;
-    text-face-name: @book-fonts;
-    text-halo-radius: 1;
-    text-halo-fill: rgba(255,255,255,0.6);
-    text-wrap-width: @standard-wrap-width;
-    text-placement: interior;
+    [zoom >= 10][way_pixels > 3000],
     [zoom >= 17] {
-      text-size: 10;
+      text-name: "[name]";
+      text-size: @landcover-font-size;
+      [way_pixels > 12000] { text-size: @landcover-font-size-big; }
+      [way_pixels > 48000] { text-size: @landcover-font-size-bigger; }
+      text-fill: @marina-text;
+      text-face-name: @landcover-face-name;
+      text-halo-radius: 1;
+      text-halo-fill: rgba(255,255,255,0.6);
+      text-wrap-width: @landcover-wrap-width-size;
+      [way_pixels > 12000] {text-wrap-width: @landcover-wrap-width-size-big; }
+      [way_pixels > 48000] {text-wrap-width: @landcover-wrap-width-size-bigger; }
+      text-placement: interior;
     }
   }
 
