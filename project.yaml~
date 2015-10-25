@@ -43,7 +43,7 @@ Stylesheet:
   - "water-features.mss"
   - "roads.mss"
   - "power.mss"
-  - "pkk_node_icons.mss"
+  - "pkk_icons.mss"
   - "citywalls.mss"
   - "placenames.mss"
   - "buildings.mss"
