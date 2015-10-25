@@ -1828,6 +1828,22 @@ Layer:
     properties:
       minzoom: 10
     advanced: {}
+  - id: "pkk_fixme_continues"
+    name: "pkk_fixme_continues"
+    class: ""
+    geometry: "point"
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: |-
+        (SELECT
+            way
+          FROM planet_osm_point
+          WHERE fixme = 'continue'
+        ) AS pkk_fixme_continues
+    properties:
+      minzoom: 10
+    advanced: {}
   - id: "roads-text-ref-low-zoom"
     name: "roads-text-ref-low-zoom"
     class: ""
