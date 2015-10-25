@@ -34,6 +34,10 @@
     marker-file: url('symbols/continue.svg');
     marker-width: 35;
   }
+  [zoom >= 18] {
+    marker-file: url('symbols/continue.svg');
+    marker-width: 55;
+  }
 }
 
 
