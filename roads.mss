@@ -43,7 +43,9 @@
 //@tertiary-casing: #8f8f8f;
 @tertiary-casing: #434343;
 
-@residential-casing: #bbb;
+//@residential-casing: #bbb;
+@residential-casing: #666;
+
 @road-casing: @residential-casing;
 @service-casing: @residential-casing;
 @living-street-casing: @residential-casing;
