@@ -4,8 +4,13 @@
 @motorway-fill: #e892a2; // Lch(70,35,10), error 0.5
 @trunk-fill: #f9b29c; // Lch(79,33,42), error 0.7
 @primary-fill: #fcd6a4; // Lch(88,31,74), error 1.7
-@secondary-fill: #f7fabf; // Lch(97,29,106), error 1.7
-@tertiary-fill: #ffffff;
+
+//@secondary-fill: #f7fabf; // Lch(97,29,106), error 1.7
+@secondary-fill: #ffdb4b;
+//@tertiary-fill: #ffffff;
+//@tertiary-fill: #f9d6aa;
+@tertiary-fill: #F3E133;
+
 @residential-fill: #ffffff;
 @service-fill: @residential-fill;
 @living-street-fill: #ededed;
@@ -16,7 +21,9 @@
 @steps-fill: @footway-fill;
 @cycleway-fill: blue;
 @bridleway-fill: green;
-@track-fill: #996600;
+//@track-fill: #996600;
+@track-fill: #231700;
+
 @aeroway-fill: #bbc;
 @runway-fill: @aeroway-fill;
 @taxiway-fill: @aeroway-fill;
@@ -32,8 +39,13 @@
 @trunk-casing: #c84e2f; // Lch(50,65,42), error 0.7
 @primary-casing: #a06b00; // Lch(50,60,74), error 1.6
 @secondary-casing: #707d05; // Lch(50,55,106), error 1.9
-@tertiary-casing: #8f8f8f;
-@residential-casing: #bbb;
+
+//@tertiary-casing: #8f8f8f;
+@tertiary-casing: #434343;
+
+//@residential-casing: #bbb;
+@residential-casing: #666;
+
 @road-casing: @residential-casing;
 @service-casing: @residential-casing;
 @living-street-casing: @residential-casing;
@@ -108,25 +120,37 @@
 @primary-width-z13:               5;
 @secondary-width-z13:             5;
 @tertiary-width-z13:              5;
-@residential-width-z13:           3;
-@living-street-width-z13:         2;
+//@residential-width-z13:           3;
+@residential-width-z13:           4;
+//@living-street-width-z13:         2;
+@living-street-width-z13:         3;
 @pedestrian-width-z13:            2;
 @bridleway-width-z13:             0.3;
-@footway-width-z13:               0.7;
-@cycleway-width-z13:              0.7;
-@path-width-z13:                  0.2;
-@track-width-z13:                 0.5;
-@track-grade1-width-z13:          0.5;
-@track-grade2-width-z13:          0.5;
+//@footway-width-z13:               0.7;
+@footway-width-z13:               1.2;
+//@cycleway-width-z13:              0.7;
+@cycleway-width-z13:              1.2;
+//@path-width-z13:                  0.2;
+@path-width-z13:                  1;
+//@track-width-z13:                 0.5;
+@track-width-z13:                 1;
+//@track-grade1-width-z13:          0.5;
+//@track-grade2-width-z13:          0.5;
+@track-grade1-width-z13:          1;
+@track-grade2-width-z13:          1;
 @steps-width-z13:                 0.7;
 
 @secondary-width-z14:             5;
 @tertiary-width-z14:              5;
-@residential-width-z14:           3;
+//@residential-width-z14:           3;
+@residential-width-z14:           4;
+//@living-street-width-z14:         4;
 @living-street-width-z14:         3;
 @pedestrian-width-z14:            3;
-@road-width-z14:                  2;
-@service-width-z14:               2;
+//@road-width-z14:                  2;
+@road-width-z14:                  3;
+//@service-width-z14:               2;
+@service-width-z14:               3;
 
 @motorway-width-z15:             10;
 @motorway-link-width-z15:         7.8;
