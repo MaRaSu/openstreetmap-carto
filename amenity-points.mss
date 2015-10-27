@@ -27,7 +27,7 @@
     point-placement: interior;
   }
 
-  [feature = 'amenity_shelter'][zoom >= 16] {
+  [feature = 'amenity_shelter'][zoom >= 10] {
     point-file: url('symbols/shelter2.p.16.png');
     point-placement: interior;
   }
