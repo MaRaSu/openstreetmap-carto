@@ -2,8 +2,13 @@
 
 @grass: #cdebb0; // also meadow, common, garden, village_green
 @golf_course: #b5e3b5;
-@scrub: #b5e3b5;
-@forest: #add19e;       // Lch(80,30,135)
+
+//@scrub: #b5e3b5;
+@scrub: #f8d8b6;
+
+//@forest: #add19e;       // Lch(80,30,135)
+@forest: #eaf4e4;       // Lch(80,30,135)
+
 @forest-text: #46673b;  // Lch(40,30,135)
 @park: #c8facc;         // Lch(94,30,145) also recreation_ground
 @orchard: #aedfa3;
@@ -412,7 +417,7 @@
       [way_pixels >= 64] { polygon-gamma: 0.3;  }
     }
     [zoom >= 14] {
-      polygon-pattern-file: url('symbols/scrub.png');
+      polygon-pattern-file: url('symbols/scrub3.png');
       [way_pixels >= 4]  { polygon-pattern-gamma: 0.75; }
       [way_pixels >= 64] { polygon-pattern-gamma: 0.3;  }
     }
