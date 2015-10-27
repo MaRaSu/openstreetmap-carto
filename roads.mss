@@ -41,10 +41,10 @@
 @secondary-casing: #707d05; // Lch(50,55,106), error 1.9
 
 //@tertiary-casing: #8f8f8f;
-@tertiary-casing: #434343;
+@tertiary-casing: #0C0C0C;
 
 //@residential-casing: #bbb;
-@residential-casing: #666;
+@residential-casing: #0C0C0C;
 
 @road-casing: @residential-casing;
 @service-casing: @residential-casing;
@@ -127,17 +127,17 @@
 @pedestrian-width-z13:            2;
 @bridleway-width-z13:             0.3;
 //@footway-width-z13:               0.7;
-@footway-width-z13:               1.2;
+@footway-width-z13:               1.5;
 //@cycleway-width-z13:              0.7;
-@cycleway-width-z13:              1.2;
+@cycleway-width-z13:              1.5;
 //@path-width-z13:                  0.2;
-@path-width-z13:                  1;
+@path-width-z13:                  1.5;
 //@track-width-z13:                 0.5;
-@track-width-z13:                 1;
+@track-width-z13:                 2;
 //@track-grade1-width-z13:          0.5;
 //@track-grade2-width-z13:          0.5;
-@track-grade1-width-z13:          1;
-@track-grade2-width-z13:          1;
+@track-grade1-width-z13:          2;
+@track-grade2-width-z13:          2;
 @steps-width-z13:                 0.7;
 
 @secondary-width-z14:             5;
@@ -233,7 +233,8 @@
 @secondary-casing-width-z12:      0.3;
 @major-casing-width-z12:          0.5;
 
-@casing-width-z13:                0.5;
+//@casing-width-z13:                0.5;
+@casing-width-z13:                1;
 @residential-casing-width-z13:    0.5;
 @secondary-casing-width-z13:      0.35;
 @major-casing-width-z13:          0.5;
