@@ -17,6 +17,7 @@
 @pedestrian-fill: #dddde8;
 @raceway-fill: pink;
 @road-fill: #ddd;
+
 @footway-fill: salmon;
 @steps-fill: @footway-fill;
 @cycleway-fill: blue;
@@ -162,12 +163,18 @@
 @living-street-width-z15:         5;
 @pedestrian-width-z15:            5;
 @bridleway-width-z15:             1.2;
-@footway-width-z15:               1;
-@cycleway-width-z15:              0.9;
-@path-width-z15:                  0.5;
-@track-width-z15:                 1.5;
-@track-grade1-width-z15:          0.75;
-@track-grade2-width-z15:          0.75;
+//@footway-width-z15:               1;
+@footway-width-z15:               2;
+//@cycleway-width-z15:              0.9;
+@cycleway-width-z15:              2;
+//@path-width-z15:                  0.5;
+@path-width-z15:                  2;
+//@track-width-z15:                 1.5;
+@track-width-z15:                 2.5;
+//@track-grade1-width-z15:          0.75;
+@track-grade1-width-z15:          2.75;
+//@track-grade2-width-z15:          0.75;
+@track-grade2-width-z15:          2.75;
 @steps-width-z15:                 3;
 
 @secondary-width-z16:            10;
@@ -178,8 +185,10 @@
 @road-width-z16:                  3.5;
 @service-width-z16:               3.5;
 @minor-service-width-z16:         2;
-@footway-width-z16:               1.3;
-@cycleway-width-z16:              0.9;
+//@footway-width-z16:               1.3;
+@footway-width-z16:               2.3;
+//@cycleway-width-z16:              0.9;
+@cycleway-width-z16:              2.9;
 
 @motorway-width-z17:             18;
 @motorway-link-width-z17:        12;
