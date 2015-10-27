@@ -151,7 +151,7 @@
 //@road-width-z14:                  2;
 @road-width-z14:                  3;
 //@service-width-z14:               2;
-@service-width-z14:               3;
+@service-width-z14:               4;
 
 @motorway-width-z15:             10;
 @motorway-link-width-z15:         7.8;
@@ -183,7 +183,8 @@
 @living-street-width-z16:         6;
 @pedestrian-width-z16:            6;
 @road-width-z16:                  3.5;
-@service-width-z16:               3.5;
+//@service-width-z16:               3.5;
+@service-width-z16:               5;
 @minor-service-width-z16:         2;
 //@footway-width-z16:               1.3;
 @footway-width-z16:               2.3;
