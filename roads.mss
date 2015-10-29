@@ -1484,7 +1484,8 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
     }
 
     [feature = 'highway_service'] {
-      [zoom >= 13][service = 'INT-normal'] {
+      [zoom >= 13][service = 'INT-normal'],
+      [zoom >= 13][service = 'INT-minor'] {
         line-width: 1;
         line-color: @unimportant-road;
       }
