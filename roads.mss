@@ -1638,7 +1638,17 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
           [zoom >= 19] {
             background/line-width: @footway-width-z19 + 2 * @paths-background-width;
           }
+          // tahan valiin mtb scale kamaa, jos se joskus toimii
+          [zoom >=13][mtb_scale = '0'] {
+            background/line-color: #66FF00; 
+            background/line-width: 30;
+            background/line-cap: round;
+            background/line-join: round;
+            background/line-opacity: 0.4;
+          }
         }
+
+
         //line/line-color: @footway-fill;
         line/line-color: #1b1b1b;
         line/line-dasharray: 1,2;
