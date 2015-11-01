@@ -1666,6 +1666,13 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
             background/line-join: round;
             background/line-opacity: 0.8;
           }
+         ["surface"="mud"][zoom >= 13]{
+           c/line-color: #3366FF;
+           c/line-width: 2.0;
+           c/line-offset:4; 
+           c/line-dasharray: 2,2;
+         }
+
 
 
         }
