@@ -1666,22 +1666,25 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
             background/line-join: round;
             background/line-opacity: 0.8;
           }
+          [zoom >=13]["mtb:scale" = "4"] {
+            background/line-color: #CC0052;
+            background/line-cap: round;
+            background/line-join: round;
+            background/line-opacity: 0.8;
+          }
           [zoom >=13]["mtb:scale" = "-1"] {
             line-pattern-file: url(symbols/nomtb.png);   
             nomtb/line-width: 1;
             nomtb/line-color: black;
             nomtb/line-dasharray: 1,2;
-       }
+          }
 
-         ["surface"="mud"][zoom >= 13]{
-           c/line-color: #3366FF;
-           c/line-width: 2.0;
-           c/line-offset:4; 
-           c/line-dasharray: 2,2;
-         }
-
-
-
+          ["surface"="mud"][zoom >= 13]{
+            c/line-color: #3366FF;
+            c/line-width: 2.0;
+            c/line-offset:4; 
+            c/line-dasharray: 2,2;
+          }
         }
        
         //line/line-color: @footway-fill;
@@ -1690,6 +1693,9 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
         line/line-join: round;
         line/line-cap: round;
         line/line-width: @footway-width-z13;
+
+	// ei todellakaan oteta kantaa siihen, onko polku päällystetty vai ei!
+	/*
         [zoom >= 15][int_surface = 'paved'] {
           //line/line-dasharray: 2,3.5;
           line/line-dasharray: 3,5;
@@ -1710,7 +1716,10 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
             line/line-width: @footway-width-z19;
           }
         }
-        [zoom >= 15][int_surface = null] {
+	*/
+
+        //[zoom >= 15][int_surface = null] {
+        [zoom >= 15] {
           //line/line-color: @footway-fill;
           line/line-color: #1b1b1b;
           //line/line-dasharray: 1,3,2,4;
@@ -1729,7 +1738,14 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
           [zoom >= 19] {
             line/line-width: @footway-width-z19;
           }
+
+          [width <= 0.5] {
+	    line/line-dasharray: 6,6;
+	  }
+
         }
+
+	/*
         [zoom >= 15][int_surface = 'unpaved'] {
           //line/line-color: @footway-fill;
           line/line-color: #1b1b1b;
@@ -1748,6 +1764,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
             line/line-width: @footway-width-z19;
           }
         }
+        */
       }
 
     }
