@@ -1621,9 +1621,12 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
 
     [feature = 'highway_footway'],
     [feature = 'highway_path'][bicycle != 'designated'][horse != 'designated'] {
-      [zoom >= 13][access != 'no'],
-      [zoom >= 15] {
-        .roads-fill[zoom >= 15] {
+      //[zoom >= 13][access != 'no'],
+      //[zoom >= 15] {
+
+      [zoom >= 13]{
+        //.roads-fill[zoom >= 15] {
+        .roads-fill[zoom >= 13] {
           background/line-color: @footway-casing;
           background/line-cap: round;
           background/line-join: round;
@@ -1639,16 +1642,34 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
             background/line-width: @footway-width-z19 + 2 * @paths-background-width;
           }
           // tahan valiin mtb scale kamaa, jos se joskus toimii
-          [zoom >=13][mtb_scale = '0'] {
-            background/line-color: #66FF00; 
-            background/line-width: 30;
+          [zoom >=13]["mtb:scale" = "0"] {
+            background/line-color: #66FF00;
             background/line-cap: round;
             background/line-join: round;
-            background/line-opacity: 0.4;
+            background/line-opacity: 0.8;
           }
+          [zoom >=13]["mtb:scale" = "1"] {
+            background/line-color: #FFFF00; 
+            background/line-cap: round;
+            background/line-join: round;
+            background/line-opacity: 0.8;
+          }
+          [zoom >=13]["mtb:scale" = "2"] {
+            background/line-color: #FF9900;
+            background/line-cap: round;
+            background/line-join: round;
+            background/line-opacity: 0.8;
+          }
+          [zoom >=13]["mtb:scale" = "3"] {
+            background/line-color: #FF0000;
+            background/line-cap: round;
+            background/line-join: round;
+            background/line-opacity: 0.8;
+          }
+
+
         }
-
-
+       
         //line/line-color: @footway-fill;
         line/line-color: #1b1b1b;
         line/line-dasharray: 1,2;
@@ -1714,6 +1735,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
           }
         }
       }
+
     }
 
     [feature = 'highway_cycleway'],
