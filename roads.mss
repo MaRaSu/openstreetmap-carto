@@ -128,7 +128,9 @@
 @pedestrian-width-z13:            2;
 @bridleway-width-z13:             0.3;
 //@footway-width-z13:               0.7;
-@footway-width-z13:               1.3;
+@footway-width-z13:               1.6;
+@footway-minor-width-z13:         1;
+
 //@cycleway-width-z13:              0.7;
 @cycleway-width-z13:              1.5;
 //@path-width-z13:                  0.2;
@@ -164,7 +166,9 @@
 @pedestrian-width-z15:            5;
 @bridleway-width-z15:             1.2;
 //@footway-width-z15:               1;
-@footway-width-z15:               1;
+@footway-width-z15:               1.6;
+@footway-minor-width-z15:         0.8;
+
 //@cycleway-width-z15:              0.9;
 @cycleway-width-z15:              2;
 //@path-width-z15:                  0.5;
@@ -187,7 +191,8 @@
 @service-width-z16:               5;
 @minor-service-width-z16:         2;
 //@footway-width-z16:               1.3;
-@footway-width-z16:               1.5;
+@footway-width-z16:               1.6;
+@footway-minor-width-z16:         1.0;
 //@cycleway-width-z16:              0.9;
 @cycleway-width-z16:              2.9;
 
@@ -230,10 +235,12 @@
 @service-width-z19:              13;
 @minor-service-width-z19:         7;
 
-@footway-width-z18:               1.3;
+@footway-width-z18:               1.5;
+@footway-minor-width-z18:         1.0;
 @cycleway-width-z18:              1;
 
-@footway-width-z19:               1.6;
+@footway-width-z19:               2.6;
+@footway-minor-width-z19:         1.6;
 @cycleway-width-z19:              1.3;
 
 
@@ -1630,16 +1637,36 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
           background/line-color: @footway-casing;
           background/line-cap: round;
           background/line-join: round;
-          background/line-width: @footway-width-z15 + 2 * @paths-background-width;
           background/line-opacity: 0.4;
+          background/line-width: @footway-width-z13 + 2 * @paths-background-width;
+          [width <= 0.5]{
+            background/line-width: @footway-width-z13 + 1 * @paths-background-width;
+          }
+          [zoom >= 15] {
+            background/line-width: @footway-width-z15 + 2 * @paths-background-width;
+            [width <= 0.5]{
+              background/line-width: @footway-width-z15 + 1 * @paths-background-width;
+            }
+          }
           [zoom >= 16] {
             background/line-width: @footway-width-z16 + 2 * @paths-background-width;
+            [width <= 0.5]{
+              background/line-width: @footway-width-z16 + 1 * @paths-background-width;
+            }
           }
           [zoom >= 18] {
             background/line-width: @footway-width-z18 + 2 * @paths-background-width;
+            [width <= 0.5]{
+              background/line-width: @footway-width-z18 + 1 * @paths-background-width;
+            }
+
           }
           [zoom >= 19] {
             background/line-width: @footway-width-z19 + 2 * @paths-background-width;
+            [width <= 0.5]{
+              background/line-width: @footway-width-z19 + 1 * @paths-background-width;
+            }
+
           }
           // tahan valiin mtb scale kamaa, jos se joskus toimii
           [zoom >=13]["mtb:scale" = "0"] {
@@ -1693,6 +1720,9 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
         line/line-join: round;
         line/line-cap: round;
         line/line-width: @footway-width-z13;
+        [width <= 0.5]{
+          line/line-width: @footway-minor-width-z13;
+        }
 
 	// ei todellakaan oteta kantaa siihen, onko polku päällystetty vai ei!
 	/*
@@ -1727,20 +1757,31 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
           line/line-join: round;
           line/line-cap: round;
           line/line-width: @footway-width-z15;
+          [width <= 0.5]{
+            line/line-width: @footway-minor-width-z15;
+          }
+
           [zoom >= 16] {
             //line/line-dasharray: 1,4,2,3;
             line/line-dasharray: 3,5;
             line/line-width: @footway-width-z16;
+            [width <= 0.5]{
+              line/line-width: @footway-minor-width-z16;
+            }
+
           }
           [zoom >= 18] {
             line/line-width: @footway-width-z18;
+            [width <= 0.5]{
+              line/line-width: @footway-minor-width-z18;
+            }
           }
           [zoom >= 19] {
             line/line-width: @footway-width-z19;
           }
 
           [width <= 0.5] {
-	    line/line-dasharray: 6,6;
+	    line/line-dasharray: 3,5;
 	  }
 
         }
