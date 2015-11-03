@@ -6,6 +6,8 @@ For each zoomlevel, all borders come from a single attachment, to handle
 overlapping borders correctly.
 */
 
+
+/*
 #admin-low-zoom[zoom < 11],
 #admin-mid-zoom[zoom >= 11][zoom < 13],
 #admin-high-zoom[zoom >= 13] {
@@ -52,6 +54,9 @@ overlapping borders correctly.
       line-width: 3;
     }
   }
+
+*/
+
   /*
   The following code prevents admin boundaries from being rendered on top of
   each other. Comp-op works on the entire attachment, not on the individual
@@ -63,6 +68,10 @@ overlapping borders correctly.
   The SQL has `ORDER BY admin_level`, so the boundary with the lowest
   admin_level is rendered on top, and therefore the only visible boundary.
   */
+
+
+
+/*
   opacity: 0.4;
   comp-op: darken;
 }
@@ -116,6 +125,7 @@ overlapping borders correctly.
   comp-op: darken;
 }
 
+
 #admin-text[zoom >= 16] {
   text-name: "[name]";
   text-face-name: @book-fonts;
@@ -127,6 +137,7 @@ overlapping borders correctly.
   text-vertical-alignment: middle;
   text-dy: -10;
 }
+*/
 
 #nature-reserve-text[zoom >= 13][way_pixels > 192000] {
   text-name: "[name]";
