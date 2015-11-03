@@ -23,7 +23,7 @@
 @cycleway-fill: blue;
 @bridleway-fill: green;
 //@track-fill: #996600;
-@track-fill: #231700;
+@track-fill: #895A00;
 
 @aeroway-fill: #bbc;
 @runway-fill: @aeroway-fill;
@@ -251,20 +251,24 @@
 @major-casing-width-z12:          0.5;
 
 //@casing-width-z13:                0.5;
-@casing-width-z13:                1;
-@residential-casing-width-z13:    0.5;
+@casing-width-z13:                0.5;
+//@residential-casing-width-z13:    0.5;
+@residential-casing-width-z13:    1;
 @secondary-casing-width-z13:      0.35;
 @major-casing-width-z13:          0.5;
 
-@casing-width-z14:                0.55;
+//@casing-width-z14:                0.55;
+@casing-width-z14:                1;
 @secondary-casing-width-z14:      0.35;
 @major-casing-width-z14:          0.6;
 
-@casing-width-z15:                0.6;
+//@casing-width-z15:                0.6;
+@casing-width-z15:                1;
 @secondary-casing-width-z15:      0.7;
 @major-casing-width-z15:          0.7;
 
-@casing-width-z16:                0.6;
+//@casing-width-z16:                0.6;
+@casing-width-z16:                1;
 @secondary-casing-width-z16:      0.7;
 @major-casing-width-z16:          0.7;
 
