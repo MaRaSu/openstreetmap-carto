@@ -1545,6 +1545,32 @@
       "advanced": {}
     },
     {
+      "name": "pkk_fixme_resurvey",
+      "srs-name": "900913",
+      "geometry": "point",
+      "class": "",
+      "id": "pkk_fixme_resurvey",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "Datasource": {
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "table": "(SELECT\n    way\n  FROM planet_osm_point\n  WHERE fixme = 'resurvey'\n) AS pkk_fixme_resurvey",
+        "geometry_field": "way",
+        "type": "postgis",
+        "key_field": "",
+        "dbname": "gis"
+      },
+      "extent": [
+        -180,
+        -85.05112877980659,
+        180,
+        85.05112877980659
+      ],
+      "properties": {
+        "minzoom": 10
+      },
+      "advanced": {}
+    },
+    {
       "name": "roads-text-ref-low-zoom",
       "srs-name": "900913",
       "geometry": "linestring",
