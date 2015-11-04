@@ -1893,10 +1893,11 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
     }
 
     [feature = 'highway_track'] {
-      [zoom >= 13][access != 'no'],
-      [zoom >= 15] {
+      //[zoom >= 13][access != 'no'],
+      //[zoom >= 15] {
+      [zoom >= 13] {
         /* The white casing that you mainly see against forests and other dark features */
-        .roads-fill[zoom >= 15] {
+        .roads-fill[zoom >= 13] {
           background/line-opacity: 0.4;
           background/line-color: @track-casing;
           background/line-join: round;
@@ -1908,6 +1909,51 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
           }
           [tracktype = 'grade2'] {
             background/line-width: @track-grade2-width-z15 + 2 * @paths-background-width;
+          }
+
+          // tahan valiin mtb scale kamaa, jos se joskus toimii
+          [zoom >=13]["mtb:scale" = "0"] {
+            background/line-color: #66FF00;
+            background/line-cap: round;
+            background/line-join: round;
+            background/line-opacity: 0.8;
+          }
+          [zoom >=13]["mtb:scale" = "1"] {
+            background/line-color: #FFFF00; 
+            background/line-cap: round;
+            background/line-join: round;
+            background/line-opacity: 0.8;
+          }
+          [zoom >=13]["mtb:scale" = "2"] {
+            background/line-color: #FF9900;
+            background/line-cap: round;
+            background/line-join: round;
+            background/line-opacity: 0.8;
+          }
+          [zoom >=13]["mtb:scale" = "3"] {
+            background/line-color: #FF0000;
+            background/line-cap: round;
+            background/line-join: round;
+            background/line-opacity: 0.8;
+          }
+          [zoom >=13]["mtb:scale" = "4"] {
+            background/line-color: #CC0052;
+            background/line-cap: round;
+            background/line-join: round;
+            background/line-opacity: 0.8;
+          }
+          [zoom >=13]["mtb:scale" = "-1"] {
+            line-pattern-file: url(symbols/nomtb.png);   
+            nomtb/line-width: 1;
+            nomtb/line-color: black;
+            nomtb/line-dasharray: 1,2;
+          }
+
+          ["surface"="mud"][zoom >= 13]{
+            c/line-color: #3366FF;
+            c/line-width: 2.0;
+            c/line-offset:4; 
+            c/line-dasharray: 2,2;
           }
         }
 
