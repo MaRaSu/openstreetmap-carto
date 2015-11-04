@@ -1837,10 +1837,10 @@ Layer:
     Datasource:
       <<: *osm2pgsql
       table: |-
-        (SELECT
-            way
-          FROM planet_osm_point
-          WHERE fixme = 'continue'
+        (select way from 
+                (select way, fixme, "FIXME", (case when lower(fixme) != '' or lower("FIXME") != '' then 
+                (case when fixme != '' then lower(fixme) else lower("FIXME") end)
+                ELSE '' END) AS int_fixme from planet_osm_point ) as foo where int_fixme = 'continue'
         ) AS pkk_fixme_continues
     properties:
       minzoom: 10
