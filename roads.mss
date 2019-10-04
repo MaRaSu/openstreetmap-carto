@@ -1675,35 +1675,30 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
           // tahan valiin mtb scale kamaa, jos se joskus toimii
           [zoom >=13]["mtb:scale" = "0"] {
             background/line-color: #66FF00;
-            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
           }
           [zoom >=13]["mtb:scale" = "1"] {
             background/line-color: #FFFF00; 
-            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
           }
           [zoom >=13]["mtb:scale" = "2"] {
             background/line-color: #FF9900;
-            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
           }
           [zoom >=13]["mtb:scale" = "3"] {
             background/line-color: #FF0000;
-            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
           }
           [zoom >=13]["mtb:scale" = "4"] {
             background/line-color: #CC0052;
-            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
@@ -1930,35 +1925,30 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
           // tahan valiin mtb scale kamaa, jos se joskus toimii
           [zoom >=13]["mtb:scale" = "0"] {
             background/line-color: #66FF00;
-            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
           }
           [zoom >=13]["mtb:scale" = "1"] {
             background/line-color: #FFFF00; 
-            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
           }
           [zoom >=13]["mtb:scale" = "2"] {
             background/line-color: #FF9900;
-            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
           }
           [zoom >=13]["mtb:scale" = "3"] {
             background/line-color: #FF0000;
-            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
           }
           [zoom >=13]["mtb:scale" = "4"] {
             background/line-color: #CC0052;
-            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
