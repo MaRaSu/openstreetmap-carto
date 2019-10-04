@@ -1675,30 +1675,35 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
           // tahan valiin mtb scale kamaa, jos se joskus toimii
           [zoom >=13]["mtb:scale" = "0"] {
             background/line-color: #66FF00;
+            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
           }
           [zoom >=13]["mtb:scale" = "1"] {
             background/line-color: #FFFF00; 
+            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
           }
           [zoom >=13]["mtb:scale" = "2"] {
             background/line-color: #FF9900;
+            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
           }
           [zoom >=13]["mtb:scale" = "3"] {
             background/line-color: #FF0000;
+            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
           }
           [zoom >=13]["mtb:scale" = "4"] {
             background/line-color: #CC0052;
+            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
@@ -1715,6 +1720,16 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
             c/line-width: 2.0;
             c/line-offset:4; 
             c/line-dasharray: 2,2;
+          }
+
+          ["obstacle"="vegetation"][zoom >= 13][zoom <= 14]{
+          line-pattern-file: url(symbols/scrub_vege_sm2.png);
+          line-pattern-offset: -6;
+          }
+
+          ["obstacle"="vegetation"][zoom >= 15]{
+          line-pattern-file: url(symbols/scrub_vege4.png);
+          line-pattern-offset: -6;
           }
         }
        
@@ -1915,30 +1930,35 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
           // tahan valiin mtb scale kamaa, jos se joskus toimii
           [zoom >=13]["mtb:scale" = "0"] {
             background/line-color: #66FF00;
+            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
           }
           [zoom >=13]["mtb:scale" = "1"] {
             background/line-color: #FFFF00; 
+            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
           }
           [zoom >=13]["mtb:scale" = "2"] {
             background/line-color: #FF9900;
+            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
           }
           [zoom >=13]["mtb:scale" = "3"] {
             background/line-color: #FF0000;
+            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
           }
           [zoom >=13]["mtb:scale" = "4"] {
             background/line-color: #CC0052;
+            background/line-width: 5.0;
             background/line-cap: round;
             background/line-join: round;
             background/line-opacity: 0.8;
@@ -1955,6 +1975,16 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
             c/line-width: 2.0;
             c/line-offset:4; 
             c/line-dasharray: 2,2;
+          }
+
+          ["obstacle"="vegetation"][zoom >= 13][zoom <= 14]{
+          line-pattern-file: url(symbols/scrub_vege_sm2.png);
+          line-pattern-offset: -6;
+          }
+          
+          ["obstacle"="vegetation"][zoom >= 15]{
+          line-pattern-file: url(symbols/scrub_vege4.png);
+          line-pattern-offset: -6;
           }
         }
 

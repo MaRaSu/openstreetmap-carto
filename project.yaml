@@ -501,13 +501,13 @@ Layer:
         (SELECT way, (CASE WHEN substr(feature, length(feature)-3, 4) = 'link' THEN substr(feature, 0, length(feature)-4) ELSE feature END) AS feature,
                 horse, foot, bicycle, tracktype, int_surface, access, construction,
                 service, oneway, link, layernotnull,
-                "mtb:scale","mtb:winter",surface,width
+                "mtb:scale","mtb:winter",obstacle,surface,width
           FROM ( -- subselect that contains both roads and rail/aero
             SELECT
                 way,
                 ('highway_' || highway) AS feature, --only motorway to tertiary links are accepted later on
                 horse,
-                foot,"mtb:scale","mtb:winter",surface,width,
+                foot,"mtb:scale","mtb:winter",obstacle,surface,width,
                 bicycle,
                 tracktype,
                 CASE WHEN surface IN ('unpaved', 'compacted', 'dirt', 'earth', 'fine_gravel', 'grass', 
@@ -548,7 +548,7 @@ Layer:
                 ) AS feature,
                 horse,
                 foot,
-                bicycle,"mtb:scale","mtb:winter",surface,width,
+                bicycle,"mtb:scale","mtb:winter",obstacle,surface,width,
                 tracktype,
                 'null',
                 CASE
@@ -939,7 +939,7 @@ Layer:
     Datasource:
       <<: *osm2pgsql
       table: |-
-        (SELECT way, (CASE WHEN substr(feature, length(feature)-3, 4) = 'link' THEN substr(feature, 0, length(feature)-4) ELSE feature END) AS feature,"mtb:scale","mtb:winter",surface, substring(width from '[-+]?([0-9]*\.[0-9]+|[0-9]+)')::real as width,
+        (SELECT way, (CASE WHEN substr(feature, length(feature)-3, 4) = 'link' THEN substr(feature, 0, length(feature)-4) ELSE feature END) AS feature,"mtb:scale","mtb:winter",obstacle,surface, substring(width from '[-+]?([0-9]*\.[0-9]+|[0-9]+)')::real as width,
 
 
                 horse, foot, bicycle, tracktype, int_surface, access, construction,
@@ -947,7 +947,7 @@ Layer:
           FROM ( -- subselect that contains both roads and rail/aero
             SELECT
                 way,
-                ('highway_' || highway) AS feature,"mtb:scale","mtb:winter",surface, width,
+                ('highway_' || highway) AS feature,"mtb:scale","mtb:winter",obstacle,surface, width,
                 horse,
                 foot,
                 bicycle,
@@ -989,7 +989,7 @@ Layer:
                                        WHEN (railway = 'rail' AND service IN ('spur', 'siding', 'yard')) THEN 'INT-spur-siding-yard'  
                                        WHEN (railway = 'tram' AND service IN ('spur', 'siding', 'yard')) THEN 'tram-service' ELSE railway END)),
                   ('aeroway_' || aeroway)
-                ) AS feature,"mtb:scale","mtb:winter",surface,width,
+                ) AS feature,"mtb:scale","mtb:winter",obstacle,surface,width,
                 horse,
                 foot,
                 bicycle,
@@ -1180,14 +1180,14 @@ Layer:
       table: |-
         (SELECT way, (CASE WHEN substr(feature, length(feature)-3, 4) = 'link' THEN substr(feature, 0, length(feature)-4) ELSE feature END) AS feature,
                 horse, foot, bicycle, tracktype, surface,width, int_surface, access, construction,
-                service, oneway, link, layernotnull,"mtb:scale","mtb:winter"
+                service, oneway, link, layernotnull,"mtb:scale","mtb:winter",obstacle
           FROM ( -- subselect that contains both roads and rail/aero
             SELECT
                 way,
                 ('highway_' || highway) AS feature, --only motorway to tertiary links are accepted later on
                 horse,
                 foot,
-                bicycle,"mtb:scale","mtb:winter", surface,width,
+                bicycle,"mtb:scale","mtb:winter",obstacle,surface,width,
                 tracktype,
                 CASE WHEN surface IN ('unpaved', 'compacted', 'dirt', 'earth', 'fine_gravel', 'grass', 'grass_paver', 'gravel', 
                                       'ground', 'mud', 'pebblestone', 'salt', 'sand', 'woodchips', 'clay') THEN 'unpaved' ELSE 
@@ -1227,7 +1227,7 @@ Layer:
                 ) AS feature,
                 horse,
                 foot,
-                bicycle,"mtb:scale","mtb:winter",
+                bicycle,"mtb:scale","mtb:winter",obstacle,
                 tracktype,surface,width,
                 'null',
                 CASE
