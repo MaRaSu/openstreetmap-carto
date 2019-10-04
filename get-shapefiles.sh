@@ -18,7 +18,7 @@ tar -xzf data/world_boundaries-spherical.tgz -C data/
 
 # simplified-land-polygons-complete-3857
 echo "downloading simplified-land-polygons-complete-3857..."
-curl -z "data/simplified-land-polygons-complete-3857.zip" -L -o "data/simplified-land-polygons-complete-3857.zip" "http://data.openstreetmapdata.com/simplified-land-polygons-complete-3857.zip"
+curl -z "data/simplified-land-polygons-complete-3857.zip" -L -o "data/simplified-land-polygons-complete-3857.zip" "https://osmdata.openstreetmap.de/download/simplified-land-polygons-complete-3857.zip"
 echo "simplified-land-polygons-complete-3857..."
 unzip $UNZIP_OPTS data/simplified-land-polygons-complete-3857.zip \
   simplified-land-polygons-complete-3857/simplified_land_polygons.shp \
@@ -41,7 +41,7 @@ unzip $UNZIP_OPTS data/ne_110m_admin_0_boundary_lines_land.zip \
 
 # land-polygons-split-3857
 echo "downloading land-polygons-split-3857..."
-curl -z "data/land-polygons-split-3857.zip" -L -o "data/land-polygons-split-3857.zip" "http://data.openstreetmapdata.com/land-polygons-split-3857.zip"
+curl -z "data/land-polygons-split-3857.zip" -L -o "data/land-polygons-split-3857.zip" "https://osmdata.openstreetmap.de/download/land-polygons-split-3857.zip"
 echo "expanding land-polygons-split-3857..."
 unzip $UNZIP_OPTS data/land-polygons-split-3857.zip \
   land-polygons-split-3857/land_polygons.shp \
@@ -53,7 +53,7 @@ unzip $UNZIP_OPTS data/land-polygons-split-3857.zip \
 
 # antarctica-icesheet-polygons-3857
 echo "downloading antarctica-icesheet-polygons-3857..."
-curl -z "data/antarctica-icesheet-polygons-3857.zip" -L -o "data/antarctica-icesheet-polygons-3857.zip" "http://data.openstreetmapdata.com/antarctica-icesheet-polygons-3857.zip"
+curl -z "data/antarctica-icesheet-polygons-3857.zip" -L -o "data/antarctica-icesheet-polygons-3857.zip" "https://osmdata.openstreetmap.de/download/antarctica-icesheet-polygons-3857.zip"
 echo "expanding antarctica-icesheet-polygons-3857..."
 unzip $UNZIP_OPTS data/antarctica-icesheet-polygons-3857.zip \
   antarctica-icesheet-polygons-3857/icesheet_polygons.shp \
@@ -64,7 +64,7 @@ unzip $UNZIP_OPTS data/antarctica-icesheet-polygons-3857.zip \
 
 # antarctica-icesheet-outlines-3857
 echo "downloading antarctica-icesheet-outlines-3857..."
-curl -z "data/antarctica-icesheet-outlines-3857.zip" -L -o "data/antarctica-icesheet-outlines-3857.zip" "http://data.openstreetmapdata.com/antarctica-icesheet-outlines-3857.zip"
+curl -z "data/antarctica-icesheet-outlines-3857.zip" -L -o "data/antarctica-icesheet-outlines-3857.zip" "https://osmdata.openstreetmap.de/download/antarctica-icesheet-outlines-3857.zip"
 echo "expanding antarctica-icesheet-outlines-3857..."
 unzip $UNZIP_OPTS data/antarctica-icesheet-outlines-3857.zip \
   antarctica-icesheet-outlines-3857/icesheet_outlines.shp \
