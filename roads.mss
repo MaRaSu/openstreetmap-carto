@@ -1704,7 +1704,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
             background/line-opacity: 0.8;
           }
           [zoom >=13]["mtb:scale" = "-1"] {
-            line-pattern-file: url(symbols/nomtb.png);   
+            line-pattern-file: url(symbols/nomtb.svg);   
             nomtb/line-width: 1;
             nomtb/line-color: black;
             nomtb/line-dasharray: 1,2;
@@ -1717,15 +1717,13 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
             c/line-dasharray: 2,2;
           }
 
-          ["obstacle"="vegetation"][zoom >= 13][zoom <= 14]{
-          line-pattern-file: url(symbols/scrub_vege_sm2.png);
-          line-pattern-offset: -6;
+          ["obstacle"="vegetation"][zoom >= 13] {
+            c/line-color: #24b30e;
+            c/line-width: 3.0;
+            c/line-offset: 4; 
+            c/line-dasharray: 4,2;
           }
 
-          ["obstacle"="vegetation"][zoom >= 15]{
-          line-pattern-file: url(symbols/scrub_vege4.png);
-          line-pattern-offset: -6;
-          }
         }
        
         //line/line-color: @footway-fill;
@@ -1954,7 +1952,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
             background/line-opacity: 0.8;
           }
           [zoom >=13]["mtb:scale" = "-1"] {
-            line-pattern-file: url(symbols/nomtb.png);   
+            line-pattern-file: url(symbols/nomtb.svg);   
             nomtb/line-width: 1;
             nomtb/line-color: black;
             nomtb/line-dasharray: 1,2;
@@ -1966,16 +1964,14 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
             c/line-offset:4; 
             c/line-dasharray: 2,2;
           }
-
-          ["obstacle"="vegetation"][zoom >= 13][zoom <= 14]{
-          line-pattern-file: url(symbols/scrub_vege_sm2.png);
-          line-pattern-offset: -6;
-          }
           
-          ["obstacle"="vegetation"][zoom >= 15]{
-          line-pattern-file: url(symbols/scrub_vege4.png);
-          line-pattern-offset: -6;
+          ["obstacle"="vegetation"][zoom >= 13] {
+            c/line-color: #24b30e;
+            c/line-width: 3.0;
+            c/line-offset: 4; 
+            c/line-dasharray: 4,2;
           }
+      
         }
 
         /* Set the properties of the brown inside */

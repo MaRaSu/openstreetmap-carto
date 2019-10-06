@@ -110,7 +110,7 @@
 
   [feature = 'landuse_quarry'][zoom >= 10] {
     polygon-fill: @quarry;
-    polygon-pattern-file: url('symbols/quarry.png');
+    polygon-pattern-file: url('symbols/quarry.svg');
     line-width: 0.5;
     line-color: grey;
     [way_pixels >= 4]  { polygon-pattern-gamma: 0.75; }
@@ -153,9 +153,9 @@
       [way_pixels >= 64] { polygon-gamma: 0.3;  }
     }
     [zoom >= 14] {
-      [religion = 'jewish'] { polygon-pattern-file: url('symbols/grave_yard_jewish.png'); }
-      [religion = 'christian'] { polygon-pattern-file: url('symbols/grave_yard_christian.png'); }
-      [religion = 'INT-generic'] { polygon-pattern-file: url('symbols/grave_yard_generic.png'); }
+      [religion = 'jewish'] { polygon-pattern-file: url('symbols/grave_yard_jewish.svg'); }
+      [religion = 'christian'] { polygon-pattern-file: url('symbols/grave_yard_christian.svg'); }
+      [religion = 'INT-generic'] { polygon-pattern-file: url('symbols/grave_yard_generic.svg'); }
       [religion = 'jewish'],
       [religion = 'christian'],
       [religion = 'INT-generic'] {
@@ -612,13 +612,13 @@
 
 #cliffs {
   [natural = 'cliff'][zoom >= 13] {
-    line-pattern-file: url('symbols/cliff.png');
+    line-pattern-file: url('symbols/cliff.svg');
     [zoom >= 15] {
-      line-pattern-file: url('symbols/cliff2.png');
+      line-pattern-file: url('symbols/cliff2.svg');
     }
   }
   [man_made = 'embankment'][zoom >= 15]::man_made {
-    line-pattern-file: url('symbols/embankment.png');
+    line-pattern-file: url('symbols/embankment.svg');
   }
 }
 
