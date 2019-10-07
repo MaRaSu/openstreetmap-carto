@@ -1707,7 +1707,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
             line-pattern-file: url(symbols/nomtb.svg);   
             nomtb/line-width: 1;
             nomtb/line-color: black;
-            nomtb/line-dasharray: 1,2;
+            nomtb/line-dasharray: 2,2;
           }
 
           ["surface"="mud"][zoom >= 13]{
@@ -1720,7 +1720,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
           ["obstacle"="vegetation"][zoom >= 13] {
             c/line-color: #24b30e;
             c/line-width: 3.0;
-            c/line-offset: 4; 
+            c/line-offset: -4; 
             c/line-dasharray: 4,2;
           }
 
@@ -1955,7 +1955,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
             line-pattern-file: url(symbols/nomtb.svg);   
             nomtb/line-width: 1;
             nomtb/line-color: black;
-            nomtb/line-dasharray: 1,2;
+            nomtb/line-dasharray: 2,2;
           }
 
           ["surface"="mud"][zoom >= 13]{
@@ -1968,7 +1968,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
           ["obstacle"="vegetation"][zoom >= 13] {
             c/line-color: #24b30e;
             c/line-width: 3.0;
-            c/line-offset: 4; 
+            c/line-offset: -4; 
             c/line-dasharray: 4,2;
           }
       
