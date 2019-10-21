@@ -6,7 +6,7 @@ exports.LocalConfig = function (localizer, project) {
 		"Datasource.dbname": "gis",
 		"Datasource.password": "renderer",
 		"Datasource.user": "renderer",
-		"Datasource.host": "10.109.19.192"
+		"Datasource.host": "10.244.5.213"
 	});
 	// You can also do it in pure JS
 	//project.mml.bounds = [1, 2, 3, 4];

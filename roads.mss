@@ -1711,17 +1711,17 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
           }
 
           ["surface"="mud"][zoom >= 13]{
-            c/line-color: #3366FF;
-            c/line-width: 2.0;
-            c/line-offset:4; 
-            c/line-dasharray: 2,2;
+            mud/line-color: #3366FF;
+            mud/line-width: 2.0;
+            mud/line-offset:4; 
+            mud/line-dasharray: 2,2;
           }
 
           ["obstacle"="vegetation"][zoom >= 13] {
-            c/line-color: #24b30e;
-            c/line-width: 3.0;
-            c/line-offset: -4; 
-            c/line-dasharray: 4,2;
+            vege/line-color: #24b30e;
+            vege/line-width: 3.0;
+            vege/line-offset: -4; 
+            vege/line-dasharray: 4,2;
           }
 
         }
@@ -1959,19 +1959,19 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
           }
 
           ["surface"="mud"][zoom >= 13]{
-            c/line-color: #3366FF;
-            c/line-width: 2.0;
-            c/line-offset:4; 
-            c/line-dasharray: 2,2;
-          }
-          
-          ["obstacle"="vegetation"][zoom >= 13] {
-            c/line-color: #24b30e;
-            c/line-width: 3.0;
-            c/line-offset: -4; 
-            c/line-dasharray: 4,2;
+            mud/line-color: #3366FF;
+            mud/line-width: 2.0;
+            mud/line-offset:4; 
+            mud/line-dasharray: 2,2;
           }
       
+          ["obstacle"="vegetation"][zoom >= 13] {
+            vege/line-color: #24b30e;
+            vege/line-width: 3.0;
+            vege/line-offset: -4; 
+            vege/line-dasharray: 4,2;
+          }
+    
         }
 
         /* Set the properties of the brown inside */
