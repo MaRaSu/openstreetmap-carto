@@ -53,6 +53,11 @@ curl -z "data/antarctica-icesheet-outlines-3857.zip" -L -o "data/antarctica-ices
 echo "expanding antarctica-icesheet-outlines-3857..."
 unzip $UNZIP_OPTS data/antarctica-icesheet-outlines-3857.zip antarctica-icesheet-outlines-3857/icesheet_outlines.{shp,shx,prj,dbf,cpg} -d data/
 
+#process populated places
+echo "processing ne_10m_populated_places..."
+rm -f data/ne_10m_populated_places/ne_10m_populated_places_fixed.*
+ogr2ogr data/ne_10m_populated_places/ne_10m_populated_places_fixed.shp data/ne_10m_populated_places/ne_10m_populated_places.shp
+
 #index
 echo "indexing shapefiles"
 shapeindex --shape_files \
