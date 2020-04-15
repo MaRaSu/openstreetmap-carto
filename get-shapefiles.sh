@@ -8,6 +8,7 @@ mkdir -p data/
 mkdir -p data/world_boundaries
 mkdir -p data/simplified-land-polygons-complete-3857
 mkdir -p data/ne_110m_admin_0_boundary_lines_land
+mkdir -p data/ne_10m_populated_places
 mkdir -p data/land-polygons-split-3857
 
 # world_boundaries
@@ -20,67 +21,47 @@ tar -xzf data/world_boundaries-spherical.tgz -C data/
 echo "downloading simplified-land-polygons-complete-3857..."
 curl -z "data/simplified-land-polygons-complete-3857.zip" -L -o "data/simplified-land-polygons-complete-3857.zip" "https://osmdata.openstreetmap.de/download/simplified-land-polygons-complete-3857.zip"
 echo "simplified-land-polygons-complete-3857..."
-unzip $UNZIP_OPTS data/simplified-land-polygons-complete-3857.zip \
-  simplified-land-polygons-complete-3857/simplified_land_polygons.shp \
-  simplified-land-polygons-complete-3857/simplified_land_polygons.shx \
-  simplified-land-polygons-complete-3857/simplified_land_polygons.prj \
-  simplified-land-polygons-complete-3857/simplified_land_polygons.dbf \
-  simplified-land-polygons-complete-3857/simplified_land_polygons.cpg \
-  -d data/
+unzip $UNZIP_OPTS data/simplified-land-polygons-complete-3857.zip simplified-land-polygons-complete-3857/simplified_land_polygons.{shp,shx,prj,dbf,cpg} -d data/
 
 # ne_110m_admin_0_boundary_lines_land
 echo "downloading ne_110m_admin_0_boundary_lines_land..."
 curl -z data/ne_110m_admin_0_boundary_lines_land.zip -L -o data/ne_110m_admin_0_boundary_lines_land.zip http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/ne_110m_admin_0_boundary_lines_land.zip
 echo "expanding ne_110m_admin_0_boundary_lines_land..."
-unzip $UNZIP_OPTS data/ne_110m_admin_0_boundary_lines_land.zip \
-  ne_110m_admin_0_boundary_lines_land.shp \
-  ne_110m_admin_0_boundary_lines_land.shx \
-  ne_110m_admin_0_boundary_lines_land.prj \
-  ne_110m_admin_0_boundary_lines_land.dbf \
-  -d data/ne_110m_admin_0_boundary_lines_land/
+unzip $UNZIP_OPTS data/ne_110m_admin_0_boundary_lines_land.zip -d data/ne_110m_admin_0_boundary_lines_land/
+
+# ne_10m_populated_places
+echo "dowloading ne_10m_populated_places..."
+curl -z data/ne_10m_populated_places.zip -L -o data/ne_10m_populated_places.zip http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_populated_places.zip
+echo "expanding ne_10m_populated_places..."
+unzip $UNZIP_OPTS data/ne_10m_populated_places.zip -d data/ne_10m_populated_places/
 
 # land-polygons-split-3857
 echo "downloading land-polygons-split-3857..."
 curl -z "data/land-polygons-split-3857.zip" -L -o "data/land-polygons-split-3857.zip" "https://osmdata.openstreetmap.de/download/land-polygons-split-3857.zip"
 echo "expanding land-polygons-split-3857..."
-unzip $UNZIP_OPTS data/land-polygons-split-3857.zip \
-  land-polygons-split-3857/land_polygons.shp \
-  land-polygons-split-3857/land_polygons.shx \
-  land-polygons-split-3857/land_polygons.prj \
-  land-polygons-split-3857/land_polygons.dbf \
-  land-polygons-split-3857/land_polygons.cpg \
-  -d data/
+unzip $UNZIP_OPTS data/land-polygons-split-3857.zip -d data/
 
 # antarctica-icesheet-polygons-3857
 echo "downloading antarctica-icesheet-polygons-3857..."
 curl -z "data/antarctica-icesheet-polygons-3857.zip" -L -o "data/antarctica-icesheet-polygons-3857.zip" "https://osmdata.openstreetmap.de/download/antarctica-icesheet-polygons-3857.zip"
 echo "expanding antarctica-icesheet-polygons-3857..."
-unzip $UNZIP_OPTS data/antarctica-icesheet-polygons-3857.zip \
-  antarctica-icesheet-polygons-3857/icesheet_polygons.shp \
-  antarctica-icesheet-polygons-3857/icesheet_polygons.shx \
-  antarctica-icesheet-polygons-3857/icesheet_polygons.prj \
-  antarctica-icesheet-polygons-3857/icesheet_polygons.dbf \
-  -d data/
+unzip $UNZIP_OPTS data/antarctica-icesheet-polygons-3857.zip antarctica-icesheet-polygons-3857/icesheet_polygons.{shp,shx,prj,dbf,cpg} -d data/
 
 # antarctica-icesheet-outlines-3857
 echo "downloading antarctica-icesheet-outlines-3857..."
 curl -z "data/antarctica-icesheet-outlines-3857.zip" -L -o "data/antarctica-icesheet-outlines-3857.zip" "https://osmdata.openstreetmap.de/download/antarctica-icesheet-outlines-3857.zip"
 echo "expanding antarctica-icesheet-outlines-3857..."
-unzip $UNZIP_OPTS data/antarctica-icesheet-outlines-3857.zip \
-  antarctica-icesheet-outlines-3857/icesheet_outlines.shp \
-  antarctica-icesheet-outlines-3857/icesheet_outlines.shx \
-  antarctica-icesheet-outlines-3857/icesheet_outlines.prj \
-  antarctica-icesheet-outlines-3857/icesheet_outlines.dbf \
-  -d data/
+unzip $UNZIP_OPTS data/antarctica-icesheet-outlines-3857.zip antarctica-icesheet-outlines-3857/icesheet_outlines.{shp,shx,prj,dbf,cpg} -d data/
 
 #index
 echo "indexing shapefiles"
 shapeindex --shape_files \
 data/simplified-land-polygons-complete-3857/simplified_land_polygons.shp \
+data/ne_110m_admin_0_boundary_lines_land/ne_110m_admin_0_boundary_lines_land.shp \
+data/ne_10m_populated_places/ne_10m_populated_places_fixed.shp \
 data/land-polygons-split-3857/land_polygons.shp \
 data/antarctica-icesheet-polygons-3857/icesheet_polygons.shp \
-data/antarctica-icesheet-outlines-3857/icesheet_outlines.shp \
-data/ne_110m_admin_0_boundary_lines_land/ne_110m_admin_0_boundary_lines_land.shp
+data/antarctica-icesheet-outlines-3857/icesheet_outlines.shp 
 
 #finish
 echo "...done!"
